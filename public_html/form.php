@@ -26,13 +26,24 @@ function validate()
 }
 </script>
 
-Please create a Username and Password Here:
+<label> Please create a Username and Password Here: </label>
 <form action="register.php" method="post" onsubmit = "return validate();">
 	<!-- Username is a required field -->
-	Username:<sup>*</sup> <input type="text" name="username" id= "username" required> <br>
-	<!-- Password should not be less than 6 characters -->
-	<i style= font-size:12px>Password should be more than 6 characters</i><br>
- 	Password:<sup>*</sup> <input type="password" name="password" id= "password" required> <br>
-	Confirm Password:<sup>*</sup> <input type="password" name="confirmPassword" id ="confirmPassword" required> <br> 
-	<button type="submit" name="submit"> Submit</button>
+	<div class= "form-group">
+		<label>Username:<sup>*</sup></label>
+		<input type="text" placeholder="Enter username" class="form-control" id= "username" required>
+	</div>
+	<div class="form-group">
+	    <!-- Password should not be less than 6 characters -->
+		<small class="form-text text-muted">Password should be more than 6 characters</small>
+		<label>Password:<sup>*</sup></label>
+ 	 	<input type="password" class="form-control" placeholder="Enter Password" id= "password" required>
+ 	</div>
+ 	<div class="form-group">
+ 		<label>Confirm Password:<sup>*</sup></label>
+ 		<input type="password" class="form-control" placeholder="Repeat Password" id ="confirmPassword" required>
+ 	</div>
+	<div class="form-group text-center">
+		<button type="submit" class="btn btn-primary "> Submit</button>
+	</div>
 </form>
